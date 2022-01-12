@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+    <head><title>PBI-Account Statement</title>
+        <link rel="stylesheet" href="../CSS/managebiller.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script type="text/javascript" src="../JS/managebiller.js"></script>
+    </head>
+    <body>
+<!--        Header Section-->
+        <header>
+            <h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-bank2" viewBox="0 0 16 16">
+                  <path d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
+                </svg> <i>Welcome! to PBI</i>
+            </h1>
+            
+<!--            log Out-->
+            <div id="logout" onclick="logout()"> 
+                <button class="Logout-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                  <path d="M7.5 1v7h1V1h-1z"/>
+                  <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+                </svg>
+                </button>
+                <span id="out">Log-Out</span>
+            </div>
+           
+        </header>
+<!--        Main Nav Bar -->
+        <div class="main-nav">
+            <button class="trail-btn" onclick="MyAcc()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    </svg>
+                My Account & Profile
+            </button>
+            <button class="trail-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                </svg>
+                Payment / Transfers
+            </button>
+             <button class="trail-btn" onclick="Billpayments()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                </svg>
+                 Bill Payments
+            </button>
+            <button class="trail-btn" onclick="service()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mouse" viewBox="0 0 16 16">
+                  <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0v6zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z"/>
+                </svg>
+                E-Services
+            </button>
+            <button class="trail-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
+                  <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                  <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                </svg>
+                E-Tax
+            </button>
+            
+        </div>
+        
+<!--        Marquee-->
+        <marquee><h2><em>WELCOME TO PBI NET-BANKING SERVICE  <span id="showdate"></span></em></h2></marquee>
+         
+<!--        side Nav-->
+        <div class="container">
+            <div class="sidenav">
+                <input class="side-btn" type="button" value="Manage Biller" onclick="manage()">
+                <input class="side-btn" type="button" value="View / Pay Bills" onclick="paybills()">
+                <input class="side-btn" type="button" value="Payment History" onclick="history()">
+                <input class="side-btn" type="button" value="Top-Up Recharge" onclick="recharge()">
+            </div>
+            
+<!--            Main Content-->
+            <section>
+                <div class="content"><header class="header-section">You Are here : / Bill Payments / Manage Biller</header></div>
+                
+                <div id="Summary"><header id="summary-header">Manage Biller</header></div>
+                <div class="Registration">
+                    <button id="btn1" onclick="togglebtn1()">Add</button> 
+                    <button id="btn2" onclick="togglebtn2()">Modify</button>
+                    <button id="btn3" onclick="togglebtn3()">View</button>
+                    <button id="btn4" onclick="togglebtn4()">Delete</button>
+                    
+                <hr class="hr">
+                    <div class="option" id="biller">
+                     <p style="color: red; font-size: 0.7em"><em>Mandatory fields are marked with an asterisk(*)</em></p>
+                    <p style="color: blue; padding-left: 10px; font-weight: bold;">Select a Biller</p>
+                    <label>City / State *</label>
+                    <select>
+                        <option>Karnataka</option>
+                        <option>Delhi</option>
+                        <option>Maharashtra</option>
+                        <option>Tamilnadu</option>
+                        <option>Kolkata</option>
+                        <option>Kerala</option>
+                    </select> 
+                        <br>
+                    <label>Biller Name *</label>
+                        <input type="text" Value="Biller Name">
+                    
+                        
+                        <div class="go" id="go">
+                        <input type="button" value="Go" class="submit">
+                    </div> 
+                    
+                    </div>
+                <div class="cnt" id="para1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                          <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+                          <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+                        </svg>      
+                        No Biller Available, Please Add Biller or make a bill Payment to Modify.
+                    </div>
+                    <div class="cnt" id="para2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                          <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+                          <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+                        </svg>      
+                        No Biller Available, Please make a bill Payment.
+                    </div>
+                    <div class="cnt" id="para3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                          <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+                          <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+                        </svg>      
+                        No Biller Available.
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+        
+<!--        footer-->
+        <footer>
+            <div> &copy;PBI</div><br>
+            <div>
+                <input class="footer" type="button" value="Privacy Statements">
+                <input class="footer" type="button" value="Disclosure">
+                <input class="footer" type="button" value="Terms & Conditions">
+                <input class="footer" type="button" value="Site Map">
+            </div>
+        </footer>
+    </body>
+
+</html>
